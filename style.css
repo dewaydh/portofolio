@@ -54,7 +54,7 @@ section {
     max-width: 900px;
     margin: 0 auto;
     background-color: #AEE2C2; /* Warna hijau di belakang teks & foto */
-    border-top-left-radius: 20px;
+    border-top-left-radius: 90px;
     border-top-right-radius: 90px; /* Efek melengkung */
 }
 
