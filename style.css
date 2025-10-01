@@ -143,6 +143,7 @@ section {
     gap: 15px;
 }
 
+/* KODE LAMA SKILL-ICON MENGGUNAKAN IMG, KITA GANTI DI BAWAH NANTI */
 .skill-icon {
     width: 40px;
     height: 40px;
@@ -235,7 +236,7 @@ section {
     justify-content: center;
     gap: 25px;
 }
-
+/* KODE LAMA SOCIAL-ICONS MENGGUNAKAN IMG, KITA GANTI DI BAWAH NANTI */
 .social-icons img {
     width: 32px;
     height: 32px;
@@ -301,5 +302,89 @@ section {
 
     .portfolio-grid, .certification-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* === KODE BARU DIMULAI DARI SINI === */
+
+/* --- Styling untuk Ikon Font Awesome --- */
+.social-icons a i {
+    font-size: 32px; /* Ukuran ikon sosial media */
+    color: #333; /* Warna ikon */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a i:hover {
+    transform: scale(1.2);
+    color: var(--brand-dark-blue);
+}
+
+.skill-icon {
+    font-size: 40px; /* Ukuran ikon skills */
+    color: var(--brand-teal);
+    width: 40px; 
+    text-align: center;
+}
+
+/* --- Navbar Styling --- */
+
+/* Mengaktifkan smooth scroll saat link navbar di-klik */
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: var(--brand-dark-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li a {
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efek saat mouse diarahkan ke link */
+.navbar li a:hover {
+    background-color: var(--brand-light-green);
+    color: var(--brand-dark-blue);
+}
+
+/* PENTING: Mendorong konten header ke bawah agar tidak tertutup navbar */
+#header {
+    /* Menimpa padding-top yang sudah ada di atas */
+    padding-top: 120px; 
+}
+
+/* Perbaikan untuk tampilan mobile agar navbar tidak terlalu besar */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-wrap: wrap; /* Memungkinkan item turun ke baris baru jika tidak muat */
+    }
+    .navbar li a {
+        padding: 15px 10px;
+        font-size: 0.8rem;
+    }
+    #header {
+        padding-top: 150px; /* Butuh padding lebih besar karena navbar bisa jadi 2 baris */
     }
 }
